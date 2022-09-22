@@ -8,37 +8,35 @@ void computeMinValue();
 void computeMaxValue();
 void computeAverageValue();
 void computeNormalisedValue();
+void resetValue();
 
 int main(){
+    
     printf("Measurement tool 1.0\n");
-
     char keyPressed;
 
-    while(keyPressed != 'q'){
+    while (keyPressed != 'q'){
         printf("VECRQ? ");
         scanf(" %c", &keyPressed);
-
-        if(keyPressed == 'v'){
-            viewMeasuserments();
-            
-        }
-        else if(keyPressed == 'e'){
-            enterMeasurement();
-            
-        }
-        else if(keyPressed == 'c'){
-            computeMeasurements();
-        }
-        else if(keyPressed == 'r'){
-            
-        }
-        else if(keyPressed == 'q'){
-            
-        }
-        else
+        switch (keyPressed){
+        case 'v':
+            //viewMeasuserments();
+            break;
+        case 'e':
+            break;
+        case 'c':
+            //computeMeasurements();
+            break;
+        case 'r':
+            break;
+        case 'q':
+            printf("Exit measurement tool");
+            break;
+        default:
             printf("Vänligen klicka någon av ovanstående knappar!");
-        
-        printf("\n");
+            break;
+            printf("\n");
+        }
     }
     return 0;
 }
@@ -46,3 +44,4 @@ int main(){
 void enterMeasurement(){
 
 }
+
